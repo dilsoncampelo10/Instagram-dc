@@ -3,16 +3,25 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+
 }
 body{
+    display: flex;
+    align-items: center;
     background-color: rgb(243, 243, 243);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    
 }
 .divisao{
     display: flex;
+    width: 100%;
     align-items: center;
+    justify-content: center;
 }
+
 .img-telefone img{
-    width: 50rem;
+    max-width: 28rem;
 }
 .continue{
     display: flex;
@@ -26,13 +35,27 @@ body{
     background-color: white;
     flex-direction: column;
     align-items: center;
-    padding: 20px 100px;
+    width: 400px;
+    max-width: 400px;
+    padding: 30px;
+}
+.grupo p{
+    color: rgb(160, 160, 160);
+    margin-bottom: 5px;
+}
+.grupo:nth-child(1){
+    margin-bottom: 10px;
+}
+.grupo:nth-child(2){
+    display: block;
+    text-align: center;
+}
+.default-link{
+    color: #0095f6;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-.photo{
-    
-   
-}
 .photo img{
     width: 6rem;
     height: 6rem;
@@ -47,7 +70,33 @@ body{
     border-radius: 4px;
     margin: 10px 0;
 }
-.default-link{
-    color: #0095f6;
-    font-weight: bold;
+.download{
+    margin-top: 20px;
+    text-align: center;
+}
+.img-download img{
+    width: 150px;
+    margin-top: 20px;
+}
+
+/*Medias*/
+@media(max-width:768px){
+.img-telefone img{
+    width: 20rem;
+}
+.grupo{
+    width: 90%;
+}
+}
+@media(max-width:460px){
+body{
+    background-color: white;
+}
+.img-telefone img{
+    display: none;
+}
+.grupo{
+    border: none; 
+}
+
 }
